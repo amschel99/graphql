@@ -26,6 +26,15 @@ User:{
 favoriteMovies: ()=>{
     return _.filter(fakeMovies,(movie)=>movie.yearOfPublication>=2010)
 }
+},
+Mutation :{
+    createUser: (parent, args)=>{
+const user=args.input
+const lastId=fakeData[fakeData.length-1].id
+user.id=lastId+1
+fakeData.push(user)
+return user;
+    }
 }
 
 };

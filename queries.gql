@@ -1,0 +1,36 @@
+mutation createUser($input: createUserInput!){
+createUser (input: $input){
+  name
+  age
+}
+}
+
+
+query getUsers {
+  users {
+    id
+    name
+    age
+  }
+}
+query getUser($userId:ID!){
+  user(id: $userId) {
+    name
+    id
+  }
+}
+query getMovie($name:String!){
+  movie(name: $name) {
+    name
+    isInTheaters
+    yearOfPublication
+  }
+}
+query getMovies{
+  movies {
+    id
+    name
+    isInTheaters
+    yearOfPublication
+  }
+}
