@@ -20,6 +20,12 @@ const name=args.name
 const movie= _.find(fakeMovies, {name})
 return movie
     }
+},
+
+User:{
+favoriteMovies: ()=>{
+    return _.filter(fakeMovies,(movie)=>movie.yearOfPublication>=2010)
+}
 }
 
 };
