@@ -37,4 +37,34 @@
         nationality:'JAPANESE'
     }
 ]
-module.exports={fakeData}
+const fakeMovies=[
+    {
+        id:1,
+        name:'Dark matter',
+        yearOfPublication:2012,
+        isInTheaters:true
+
+    },
+    {
+        id:2,
+        name:'Stranger things',
+        yearOfPublication:2022,
+        isInTheaters:true
+
+    },
+    {
+        id:3,
+        name:'Harry Potter ',
+        yearOfPublication:1997,
+        isInTheaters:true
+
+    },
+    {
+        id:4,
+        name:'Solitude in space',
+        yearOfPublication:2032,
+        isInTheaters:false
+
+    }
+]
+module.exports={fakeData,fakeMovies}
