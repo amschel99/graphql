@@ -24,8 +24,13 @@ nationality:Nationality=KENYAN
 }
 type Mutation{
 
-createUser(input:createUserInput):User!
+createUser(input:createUserInput!):User!
+updateUsername(input:updateUserInput!):User
 
+}
+input updateUserInput{
+id:ID!
+newUsername:String!
 }
 type Movie{
 id:ID!,

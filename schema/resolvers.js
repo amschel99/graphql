@@ -34,6 +34,17 @@ const lastId=fakeData[fakeData.length-1].id
 user.id=lastId+1
 fakeData.push(user)
 return user;
+    },
+    updateUsername:(parent,args)=>{
+const {id,newUsername}=args.input
+let updatedUser;
+fakeData.forEach((user)=>{
+    if(user.id===id){
+        user.username=newUsername
+        updatedUser=user
+    }
+})
+return updatedUser;
     }
 }
 
